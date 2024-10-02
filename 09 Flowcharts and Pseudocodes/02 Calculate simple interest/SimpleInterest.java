@@ -5,17 +5,18 @@ class SimpleInterest {
         Scanner scanner=new Scanner(System.in);
 
         System.out.print("Enter the amount:");
-        float amount=scanner.nextFloat();
+        float principle=scanner.nextFloat();
 
         System.out.print("Enter the rate:");
         float rate=scanner.nextFloat();
 
         System.out.print("Enter the interest:");
-        float interest=scanner.nextFloat();
+        float time=scanner.nextFloat();
 
-        float si=(amount*rate*interest)/100;
+        float si=(principle*rate*time)/100;
 
         System.out.print("The simple interest is:"+si);
 
+        scanner.close();
     }
 }

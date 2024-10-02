@@ -13,5 +13,7 @@ class SumOfTwoNumbers {
         int sum=a+b;
 
         System.out.println("The sum is:"+sum);
+
+        scanner.close();
     }
 }

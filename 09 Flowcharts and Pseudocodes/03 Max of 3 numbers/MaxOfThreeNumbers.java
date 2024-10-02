@@ -27,5 +27,7 @@ class MaxOfThreeNumbers {
             else
                 System.out.print(c);
         }
+
+        scanner.close();
     }
 }

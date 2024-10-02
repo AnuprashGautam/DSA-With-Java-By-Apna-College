@@ -20,5 +20,7 @@ class PrimeNumber {
             System.out.println("Number is Prime");
         else
             System.out.println("Number is not Prime");
+
+        scanner.close();
     }
 }
