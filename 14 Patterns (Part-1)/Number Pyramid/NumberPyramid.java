@@ -9,15 +9,16 @@ public class NumberPyramid {
 
         int temp=1;
 
-        for (int i = 1; i <= height; i++) {
+        for (int i = 0; i < height; i++) {
             for (int j=height-i;j>=1;j--)           // for printing the spaces before the numbers.
             {
                 System.out.print("  ");
             }
 
-            for (int j = 1; j <= i; j++) {          //for writing the actual numbers.
-                System.out.print(i+" ");
+            for (int j = 1; j <= 2*i+1; j++) {          //for writing the actual numbers.
+                System.out.print(temp +" ");
             }
+            temp++;
             System.out.println();
         }
     }
