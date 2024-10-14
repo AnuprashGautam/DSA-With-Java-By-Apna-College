@@ -22,13 +22,13 @@ public class MathClassFunctions
         System.out.println("log10 of x is: " + Math.log10(x));   
         System.out.println("log10 of y is: " + Math.log10(y));    
           
-        // return the log of x + 1  
+        // return the log of (x + 1)  
         System.out.println("log1p of x is: " +Math.log1p(x));    
   
-        // return a power of 2    
+        // return a power of e    
         System.out.println("exp of a is: " +Math.exp(x));    
           
-        // return (a power of 2)-1  
+        // return (a power of e)-1  
         System.out.println("expm1 of a is: " +Math.expm1(x));  
     }    
 }    
