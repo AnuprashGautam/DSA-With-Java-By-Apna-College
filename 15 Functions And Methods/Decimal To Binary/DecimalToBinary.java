@@ -15,7 +15,7 @@ public class DecimalToBinary {
             m=m/2;
             pow++;
         }
-        System.out.println("The decimal form of the binary number is:"+bin);
+        System.out.println("The binary form of the decimal number is:"+bin);
     }
     public static void main(String[] args) {
         Scanner sc= new Scanner(System.in);
