@@ -3,9 +3,10 @@ public class MaxSubArraySum
 
     static void formPair(int[] array)
     {
+        int maxSubArraySum = Integer.MIN_VALUE;
+
         for (int i = 0; i < array.length; i++) 
         {
-            int maxSubArraySum = Integer.MIN_VALUE;
             for (int j = i; j < array.length; j++) {
                 int subArraySum=array[i];
                 for (int k = i+1; k <= j; k++) {
@@ -17,8 +18,10 @@ public class MaxSubArraySum
 
                 System.out.print(subArraySum+"  ");
             }
-            System.out.println(" MAX: "+ maxSubArraySum);
+            System.out.println();
         }
+        System.out.println();
+        System.out.println("Maximum sub array in the whole parent array: "+ maxSubArraySum);
     }
 
 
