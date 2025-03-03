@@ -1,15 +1,17 @@
+import java.util.Arrays;
+
 class DuplicateElement {
     static boolean isDuplicate(int[] nums)
     {
         boolean isTwice= false;
 
-        for(int i=0; i<nums.length; i++)
+        Arrays.sort(nums);      // Sorting the array.
+
+        for(int i=0; i<nums.length-1; i++)
         {
-            for (int j = 0; j < nums.length; j++) {
-                if(i!=j & nums[i]==nums[j])
-                {
-                    return true;
-                }
+            if((nums[i]^nums[i+1])==0)
+            {
+                return true;
             }
         }
 
@@ -17,6 +19,6 @@ class DuplicateElement {
     }
 
     public static void main(String[] args) {
-        System.out.println(isDuplicate(new int[]{ 1, 1, 3, 3, 4, 3, 2, 4, 2}));
+        System.out.println(isDuplicate(new int[] { 1, 1, 3, 3, 4, 3, 2, 4, 2 }));
     }
 }
