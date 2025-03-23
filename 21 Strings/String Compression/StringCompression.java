@@ -4,38 +4,46 @@ class StringCompression {
         StringBuilder sb=new StringBuilder();
         Integer count=1;
 
-        char previous=str.charAt(0);
-        char current;
+        if(str.length()==1)         // Edge case: when there is only one character in the string.
+        {
+            sb.append(str.charAt(0));
+            sb.append(1);
+            
+            return sb;
+        }
 
-        for (int i = 1; i < str.length(); i++) {
-            current=str.charAt(i);
-
-            if((i==str.length()-1)&&(previous==current))
+        for (int i = 0; i < str.length(); i++) {
+            if(i < str.length()-1)
             {
-                sb.append(current);
-                sb.append(count+1);
-            }else if(previous==current)
+                if(str.charAt(i)==str.charAt(i+1))
+                {
+                    count++;
+                }
+                else{
+                    sb.append(str.charAt(i));
+                    sb.append(count);
+                    count=1;
+                }
+            }
+            else    // i = str.length()-1  Handling the last left character.
             {
-                previous=current;
-                count++;
-            }else if(previous!=current)
-            {
-                sb.append(previous);
-                sb.append(count);
-                previous=current;
-                count=1;
+                if(str.charAt(i-1)==str.charAt(i))
+                {
+                    sb.append(str.charAt(i));
+                    sb.append(count);
+                }
+                else{
+                    sb.append(str.charAt(i));
+                    sb.append(1);
+                }
             }
         }
         return sb;
     }
 
     public static void main(String[] args) {
-        String str="aaaabbbb";
+        String str="bbbddddd";
 
         System.out.println("After compression: "+compressString(str));
-
-        System.out.println("ApnaCollege".replace("l",""));
-        str.contentEquals()
-
     }
 }
