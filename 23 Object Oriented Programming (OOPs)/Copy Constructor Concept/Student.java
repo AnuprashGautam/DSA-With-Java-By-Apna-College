@@ -9,12 +9,23 @@ class Student
         // Non-parameterized constructor
     }
 
-    Student(Student s2)     // Copy constructor
+    // Student(Student s2)     // Copy constructor (Shallow)
+    // {
+    //     this.name=s2.name;
+    //     this.rollNo=s2.rollNo;
+    //     this.marks=s2.marks;
+    // }
+
+    Student(Student s2)     // Copy constructor (Deep)
     {
         this.name=s2.name;
         this.rollNo=s2.rollNo;
-        this.marks=s2.marks;
+        for(int i=0; i<s2.marks.length; i++)
+        {
+            this.marks[i]=s2.marks[i];
+        }
     }
+
     public static void main (String[] args)
     {
         Student s1=new Student();    
@@ -38,7 +49,7 @@ class Student
             System.out.print(s2.marks[i]+" ");
         }
 
-        System.out.println("The name of s1 object: "+s1.name);
+        System.out.println("\nThe name of s1 object: "+s1.name);
         System.out.println("The name of s2 object: "+s2.name);
     }
 }
