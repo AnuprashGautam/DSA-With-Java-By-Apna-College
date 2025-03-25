@@ -26,6 +26,7 @@ class Student
 
         Student s2=new Student(s1);         // Creating object by using the copy constructor
         s2.marks[2]=100;
+        s2.name="Anuprash Sharma";
 
         System.out.println("\nPrinting the s1 marks:");
         for (int i = 0; i < s1.marks.length; i++) {
@@ -36,5 +37,8 @@ class Student
         for (int i = 0; i < s2.marks.length; i++) {
             System.out.print(s2.marks[i]+" ");
         }
+
+        System.out.println("The name of s1 object: "+s1.name);
+        System.out.println("The name of s2 object: "+s2.name);
     }
 }
