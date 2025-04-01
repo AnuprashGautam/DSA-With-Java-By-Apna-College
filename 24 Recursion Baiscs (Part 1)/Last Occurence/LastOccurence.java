@@ -18,7 +18,7 @@ class LastOccurence
     }
     public static void main (String[] args)
     {
-        int[] arr={1,2,3,4,5,6,7,7};
-        System.out.println("What is the last occurence of 7 in the array? "+lastOccurence(arr, 7, 0));
+        int[] arr={1,2,3,4,5,6,5,7};
+        System.out.println("What is the last occurence of 5 in the array? "+lastOccurence(arr, 5, 0));
     }
 }

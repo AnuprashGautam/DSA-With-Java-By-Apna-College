@@ -6,7 +6,7 @@ public class FirstOccurence
         {
             return -1;
         }
-        if(target==arr[start])
+        else if(target==arr[start])
         {
             return start;
         }
